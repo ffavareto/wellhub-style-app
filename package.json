@@ -10,7 +10,8 @@
     "database:stop": "docker compose stop",
     "build": "tsup src --out-dir build",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage"
   },
   "keywords": [
     "TypeScript",
@@ -24,6 +25,7 @@
   "license": "ISC",
   "devDependencies": {
     "@types/node": "22.7.4",
+    "@vitest/coverage-v8": "2.1.2",
     "prisma": "5.20.0",
     "tsup": "8.3.0",
     "tsx": "4.19.1",
