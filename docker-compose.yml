@@ -1,5 +1,3 @@
-version: "3"
-
 services:
   wellhub-style-app-pg:
     image: bitnami/postgresql
