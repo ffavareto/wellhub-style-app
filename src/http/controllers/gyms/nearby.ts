@@ -4,8 +4,8 @@ import { makeFetchNearbyGymsUseCase } from "../../../use-cases/factories/make-fe
 
 export async function nearby(request: FastifyRequest, reply: FastifyReply) {
   const fetchNearbyGymsQuerySchema = z.object({
-    userLatitude: z.number().refine((v) => Math.abs(v) <= 90),
-    userLongitude: z.number().refine((v) => Math.abs(v) <= 180),
+    userLatitude: z.coerce.number().refine((v) => Math.abs(v) <= 90),
+    userLongitude: z.coerce.number().refine((v) => Math.abs(v) <= 180),
   });
 
   const { userLatitude, userLongitude } = fetchNearbyGymsQuerySchema.parse(
@@ -19,5 +19,5 @@ export async function nearby(request: FastifyRequest, reply: FastifyReply) {
     userLongitude,
   });
 
-  return reply.status(201).send({ gyms });
+  return reply.status(200).send({ gyms });
 }
