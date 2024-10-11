@@ -1,7 +1,7 @@
 {
   "name": "wellhub-style-app",
   "version": "1.0.0",
-  "description": "Wellhub stype app",
+  "description": "Wellhub Stype App",
   "type": "module",
   "main": "index.js",
   "scripts": {
